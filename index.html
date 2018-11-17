@@ -1,0 +1,35 @@
+
+Kai's Breguet Range Equation Calculator <br><br><br>
+
+INPUT: <br><br>
+Input Label Example 1: <input id="test1" placeholder="test1 placeholder"></input><br>
+Input Label Example 2: <input id="test2" placeholder="test2 placeholder"></input><br>
+Input Label Example 3: <input id="test3" placeholder="test3 placeholder"></input><br>
+
+<br>
+<button onclick="calculate()">Run Calculation!</button>
+
+<br><br><br>
+OUTPUT: <br><br>
+Flight time: <span id="time">Example Time</span><br>
+Flight range: <span id="range">Example Range</span>
+
+
+
+<script>
+function calculate() {
+  var time = 0;
+  var range = 0;
+
+  test1 = parseFloat(document.getElementById("test1").value);
+  test2 = parseFloat(document.getElementById("test2").value);
+  test3 = parseFloat(document.getElementById("test3").value);
+
+  time = test1 + test2;
+  range = time * test3;
+
+  document.getElementById("time").innerHTML = time;
+  document.getElementById("range").innerHTML = range;
+
+}
+</script>
